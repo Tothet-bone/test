@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventTrack — Учёт мероприятий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Учёт мероприятий образовательного учреждения</h1>
+
+        <div class="form-container">
+            <h2>Добавить мероприятие</h2>
+            <form id="eventForm">
+                <input type="text" id="eventName" placeholder="Название мероприятия" required>
+                <input type="date" id="eventDate" required>
+                <select id="eventType" required>
+                    <option value="">Тип мероприятия</option>
+                    <option value="лекция">Лекция</option>
+                    <option value="семинар">Семинар</option>
+                    <option value="олимпиада">Олимпиада</option>
+                    <option value="собрание">Собрание</option>
+                </select>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+
+        <div class="filter-container">
+            <label>Фильтр по дате: </label>
+            <input type="date" id="filterDate">
+            <label>Тип: </label>
+            <select id="filterType">
+                <option value="">Все</option>
+                <option value="лекция">Лекция</option>
+                <option value="семинар">Семинар</option>
+                <option value="олимпиада">Олимпиада</option>
+                <option value="собрание">Собрание</option>
+            </select>
+            <button id="applyFilter">Применить</button>
+        </div>
+
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Дата</th>
+                    <th>Тип</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="eventsList">
+                <!-- Сюда будут добавляться мероприятия -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
